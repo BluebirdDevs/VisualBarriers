@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "visual_barriers",
+  "version": "${version}",
+  "name": "Visual Barriers",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/visual_barriers/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "bluebird.visual_barriers.VisualBarriers"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "visual_barriers.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=${minecraft_version}"
+  }
+}

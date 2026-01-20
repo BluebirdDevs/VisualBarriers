@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "visual_barriers:block/barrier"
+    }
+  }
+}
