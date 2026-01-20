@@ -3,9 +3,13 @@
   "id": "visual_barriers",
   "version": "${version}",
   "name": "Visual Barriers",
-  "description": "",
-  "authors": [],
-  "contact": {},
+  "description": "See barriers with the press of a key",
+  "authors": ["BluebirdDevs"],
+  "contact": {
+    "sources": "https://github.com/BluebirdDevs/VisualBarriers",
+    "homepage": "https://modrinth.com/project/AoSJ2hG0",
+    "issues": "https://github.com/BluebirdDevs/VisualBarriers/issues"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/visual_barriers/icon.png",
   "environment": "client",

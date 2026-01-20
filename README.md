@@ -1,0 +1,1 @@
+See barriers with the press of a key. There is no registry mismatch meaning you can use it in singleplayer without others needing the mod
