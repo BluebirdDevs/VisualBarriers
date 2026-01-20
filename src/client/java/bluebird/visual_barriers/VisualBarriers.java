@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 
 public class VisualBarriers implements ClientModInitializer {
     public static final String MOD_ID = "visualbarriers";
-    private static final KeyBinding.Category CATEGORY = KeyBinding.Category.create(Identifier.of(MOD_ID, "."+MOD_ID));
+    private static final KeyBinding.Category CATEGORY = KeyBinding.Category.create(Identifier.of(MOD_ID, MOD_ID));
     private static KeyBinding keybindBarrierVisibility;
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
