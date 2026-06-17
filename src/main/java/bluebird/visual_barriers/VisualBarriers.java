@@ -30,7 +30,7 @@ public class VisualBarriers implements ClientModInitializer {
             if (keybindBarrierVisibility.consumeClick()) {
                 isEnabled = !isEnabled;
                 LOGGER.info("Toggled " +  (isEnabled ? "On" : "Off"));
-                if (Minecraft.getInstance().levelRenderer != null) Minecraft.getInstance().levelRenderer.allChanged();
+                if (Minecraft.getInstance().levelRenderer != null) Minecraft.getInstance().levelExtractor.allChanged();
             }
         });
     }
