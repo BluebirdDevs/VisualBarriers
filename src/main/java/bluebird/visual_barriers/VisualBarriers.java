@@ -1,12 +1,11 @@
 package bluebird.visual_barriers;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
-import net.minecraft.client.Minecraft;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,15 +21,14 @@ public class VisualBarriers implements ClientModInitializer {
     public void onInitializeClient() {
         keybindBarrierVisibility = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.visualbarriers.toggle",
-                GLFW.GLFW_KEY_B,
+                InputConstants.KEY_B,
                 CATEGORY
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (keybindBarrierVisibility.consumeClick()) {
                 isEnabled = !isEnabled;
-                LOGGER.info("Toggled " +  (isEnabled ? "On" : "Off"));
-                if (Minecraft.getInstance().levelRenderer != null) Minecraft.getInstance().levelExtractor.allChanged();
+                if (client.levelRenderer != null) client.levelExtractor.allChanged();
             }
         });
     }
